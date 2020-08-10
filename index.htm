@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <style src="css/index.css"></style>
+</head>
+<body>
+  <div id="app">
+    <h1 class="page_title">{{ pageTitle }}</h1>
+    <div class="contents">
+      <section class="news_block" v-for="result in results">
+        <h2 class="news_title">{{ result.title.rendered }}</h2>
+      </section>
+    </div>
+  </div>
+  <!-- js 読み込み -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
