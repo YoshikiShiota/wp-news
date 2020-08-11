@@ -4,14 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>News</title>
-  <style src="css/index.css"></style>
+  <!-- BulmaのCSS（スタイルシート）を参照 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
   <div id="app">
-    <h1 class="page_title">{{ pageTitle }}</h1>
-    <div class="contents">
-      <section class="news_block" v-for="result in results">
+    <h1 class="page_title is-size-3 has-text-success has-text-centered">{{ pageTitle }}</h1>
+    <div class="contents columns">
+      <section class="news_block column" v-for="result in results">
         <h2 class="news_title">{{ result.title.rendered }}</h2>
+        {{ result.content.rendered }}
       </section>
     </div>
   </div>

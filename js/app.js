@@ -1,7 +1,7 @@
 new Vue({
   el: '#app',
   data: {
-    pageTitle: 'test',
+    pageTitle: 'News',
     results: [] // apiで取得したデータを格納する配列
   },
   mounted() {
